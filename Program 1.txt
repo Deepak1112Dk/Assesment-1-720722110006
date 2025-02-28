@@ -1,0 +1,33 @@
+class Main {
+    public static void main(String[] args) {
+        int a[][]={{1,4,3},{11,50,6},{4,8,30}};
+        int max=0;
+        int second=0;
+        int third=0;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                if(a[i][j]>max){
+                    third=second;
+                    second=max;
+                    max=a[i][j];
+                }
+                else if(a[i][j]>second && a[i][j]<max){
+                    third=second;
+                    second=a[i][j];
+                }
+                else if(a[i][j]>third && a[i][i]<second){
+                    third=a[i][j];
+                }
+            }
+        }
+        if(third==0){
+            System.out.println("third is not available");
+        }
+        else{
+            System.out.println(third);
+        }
+        
+        
+        
+    }
+    }

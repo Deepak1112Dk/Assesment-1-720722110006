@@ -1,0 +1,27 @@
+class Main {
+    public static void main(String[] args) {
+        int a[][]={{5,4,7},{1,8,3},{9,6,2}};
+        for(int i=0;i<a.length;i++){
+            int temp=0;
+            for(int j=0;j<a[0].length;j++){
+                
+                for(int k=0;k<a.length;k++){
+                    
+                    for(int l=0;l<a[0].length;l++){
+                        if(a[i][j]<a[k][l]){
+                            temp=a[i][j];
+                            a[i][j]=a[k][l];
+                            a[k][l]=temp;
+                        }
+                    }
+                }
+            }
+        }
+        for(int h=0;h<a.length;h++,System.out.println()){
+            for(int g=0;g<a.length;g++,System.out.print(" ")){
+                System.out.print(a[h][g]);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,18 @@
+class Main {
+    public static void main(String[] args) {
+        int a[][]={{5,4,7},{1,8,3},{9,6,2}};
+        int n=a.length;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                if(i>=(n/2)-1+i && j>=(n/2)-1+j){
+                    a[j][i]=a[i][j];
+                }
+            }
+        }
+        for(int h=0;h<a.length;h++,System.out.println()){
+            for(int r=0;r<a[0].length;r++,System.out.print(" ")){
+                System.out.print(a[h][r]);
+            }
+        }
+    }
+}
