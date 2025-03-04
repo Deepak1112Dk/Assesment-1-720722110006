@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+        String a = "I Love Java Programming";
+        int b = a.length();
+        String revname = "";
+        String result = "";
+        
+        for(int i=b-1;i>=0;i--) {
+            if(a.charAt(i)==' ') {
+                result = result+revname + " ";
+                revname = "";
+            }else{
+                revname = a.charAt(i) + revname;
+            }
+        }
+        result =result+ revname; 
+        System.out.print(result);
+    }
+}
