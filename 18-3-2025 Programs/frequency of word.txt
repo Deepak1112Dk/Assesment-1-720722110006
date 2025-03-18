@@ -1,0 +1,20 @@
+class Main {
+    public static void main(String[] args) {
+        String input="a a a b b";
+        String cond = "[,\\.\\s]";
+        int[] freq=new int[input.length()];
+        String[] a = input.split(cond);
+        for(int i=0;i<a.length;i++){
+            if(freq[i]==0){
+                int count=1;
+            for(int j=0;j<a.length;j++){
+                if(a[i].equals(a[j]) && i!=j){
+                    count++;
+                    freq[j]=-1;
+                }
+            }System.out.println(a[i] +" "+ count);
+            freq[i]=-1;
+            }
+        }
+    }
+}
